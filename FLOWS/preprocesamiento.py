@@ -2,10 +2,6 @@ from metaflow import FlowSpec, step
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 
-from metaflow import FlowSpec, step
-import pandas as pd
-from sklearn.preprocessing import LabelEncoder
-
 class PreprocesamientoFlow(FlowSpec):
 
     @step
@@ -23,28 +19,35 @@ class PreprocesamientoFlow(FlowSpec):
         print("🧹 Limpiando y codificando datos...")
 
         columnas_necesarias = ['team', 'opponent', 'result']
-        self.df = self.df[columnas_necesarias]
+        df = self.df[columnas_necesarias].copy()
 
-        # Guardamos una copia con nombres originales
-        self.df.to_csv('data/premier_league_con_nombres.csv', index=False)
-
-        # Codificamos los nombres para el modelo
-        equipos_combinados = pd.concat([self.df['team'], self.df['opponent']])
+        # Codificamos los nombres de los equipos
+        equipos_combinados = pd.concat([df['team'], df['opponent']])
         equipo_encoder = LabelEncoder()
         equipo_encoder.fit(equipos_combinados)
 
-        df_codificado = self.df.copy()
-        df_codificado['team'] = equipo_encoder.transform(self.df['team'])
-        df_codificado['opponent'] = equipo_encoder.transform(self.df['opponent'])
+        # Creamos columnas nuevas con los códigos numéricos
+        df['team_num'] = equipo_encoder.transform(df['team'])
+        df['opponent_num'] = equipo_encoder.transform(df['opponent'])
 
+        # Convertimos 'result' (W/D/L) en números:
         resultado_map = {'W': 0, 'D': 1, 'L': 2}
-        df_codificado['Resultado'] = df_codificado['result'].map(resultado_map)
-        df_codificado = df_codificado.drop(columns=['result'])
+        df['Resultado'] = df['result'].map(resultado_map)
+
+        # Renombramos columnas para claridad
+        df = df.rename(columns={
+            'team': 'team_nombre',
+            'opponent': 'opponent_nombre'
+        })
+
+        # Reordenamos columnas
+        df = df[['team_nombre', 'team_num', 'opponent_nombre', 'opponent_num', 'Resultado']]
 
         print("✅ Datos preprocesados:")
-        print(df_codificado.head())
+        print(df.head())
 
-        # Guardamos el archivo limpio codificado para entrenamiento
+        # Guardamos el dataset final con nombres + códigos
+        df.to_csv('data/premier_league_limpio.csv', index=False)
 
         self.next(self.end)
 
