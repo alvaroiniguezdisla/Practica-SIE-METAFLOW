@@ -1,59 +1,89 @@
 from metaflow import FlowSpec, step
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import train_test_split
 
-class PreprocesamientoFlow(FlowSpec):
 
-    @step
-    def start(self):
-        print("🔄 Leyendo los datos...")
-        self.df = pd.read_csv('data/premier_league.csv')
 
-        print("📋 Columnas originales:")
-        print(self.df.columns)
 
-        self.next(self.limpiar_datos)
 
-    @step
-    def limpiar_datos(self):
-        print("🧹 Limpiando y codificando datos...")
 
-        columnas_necesarias = ['team', 'opponent', 'result']
-        df = self.df[columnas_necesarias].copy()
 
-        # Codificamos los nombres de los equipos
-        equipos_combinados = pd.concat([df['team'], df['opponent']])
-        equipo_encoder = LabelEncoder()
-        equipo_encoder.fit(equipos_combinados)
 
-        # Creamos columnas nuevas con los códigos numéricos
-        df['team_num'] = equipo_encoder.transform(df['team'])
-        df['opponent_num'] = equipo_encoder.transform(df['opponent'])
 
-        # Convertimos 'result' (W/D/L) en números:
-        resultado_map = {'W': 0, 'D': 1, 'L': 2}
-        df['Resultado'] = df['result'].map(resultado_map)
 
-        # Renombramos columnas para claridad
-        df = df.rename(columns={
-            'team': 'team_nombre',
-            'opponent': 'opponent_nombre'
-        })
+class InitFlow(FlowSpec):
+        @step
+        def start(self):
+            self.data = pd.read_csv('data/premier_league.csv')
+            self.train, self.test = train_test_split(self.data, test_size=0.2,random_state=42)
+            self.next(self.ingenieria_de_datos)
 
-        # Reordenamos columnas
-        df = df[['team_nombre', 'team_num', 'opponent_nombre', 'opponent_num', 'Resultado']]
 
-        print("✅ Datos preprocesados:")
-        print(df.head())
+        @step
+        def ingenieria_de_datos(self):
+            print("🔨 Ingeniería de datos...")
+           
+            columnas_necesarias = ['team', 'opponent', 'result']
+            # Filtrar las columnas necesarias para ambos conjuntos de datos directamente
+            self.train = self.train[columnas_necesarias]
+            self.test = self.test[columnas_necesarias]
 
-        # Guardamos el dataset final con nombres + códigos
-        df.to_csv('data/premier_league_limpio.csv', index=False)
 
-        self.next(self.end)
+            # Guardamos una copia con nombres originales (si es necesario para auditoría)
+            self.train.to_csv('data/train_with_names.csv', index=False)
+            self.test.to_csv('data/test_with_names.csv', index=False)
 
-    @step
-    def end(self):
-        print("✅ ¡Preprocesamiento completado!")
+
+            # Codificamos los nombres de los equipos para el modelo
+            equipos_combinados = pd.concat([self.train['team'], self.train['opponent'], self.test['team'], self.test['opponent']])
+            equipo_encoder = LabelEncoder()
+            equipo_encoder.fit(equipos_combinados)
+
+
+            # Codificación de los equipos en los conjuntos de entrenamiento y test
+            self.train['team'] = equipo_encoder.transform(self.train['team'])
+            self.train['opponent'] = equipo_encoder.transform(self.train['opponent'])
+            self.test['team'] = equipo_encoder.transform(self.test['team'])
+            self.test['opponent'] = equipo_encoder.transform(self.test['opponent'])
+
+
+            # Mapear los resultados
+            resultado_map = {'W': 0, 'D': 1, 'L': 2}
+            self.train['Resultado'] = self.train['result'].map(resultado_map)
+            self.test['Resultado'] = self.test['result'].map(resultado_map)
+
+
+            # Eliminar la columna 'result' ya que ya tenemos la columna 'Resultado'
+            self.train = self.train.drop(columns=['result'])
+            self.test = self.test.drop(columns=['result'])
+
+
+            # Mostrar los primeros registros procesados para verificar
+            print("✅ Datos preprocesados:")
+            print(self.train.head())
+            print(self.test.head())
+
+
+            # Guardamos los archivos limpios y codificados para entrenamiento
+            self.train.to_csv('data/train_preprocessed.csv', index=False)
+            self.test.to_csv('data/test_preprocessed.csv', index=False)
+
+
+            # Guardar los datos preprocesados en el flujo
+            self.train_processed = self.train
+            self.test_processed = self.test
+
+
+            self.next(self.end)
+           
+
+
+        @step
+        def end(self):
+            print("✅ ¡Preprocesamiento completado!")
+
 
 if __name__ == '__main__':
-    PreprocesamientoFlow()
+    InitFlow()
+
