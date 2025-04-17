@@ -1,45 +1,48 @@
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report, confusion_matrix, ConfusionMatrixDisplay
+from metaflow import FlowSpec, step
 import pandas as pd
-import joblib
-import matplotlib.pyplot as plt
-import seaborn as sns
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
 
-# 1. Cargar los datos
-print("📥 Cargando datos de entrenamiento y test...")
-train_df = pd.read_csv('data/train_preprocessed.csv')
-test_df = pd.read_csv('data/test_preprocessed.csv')
+class EntrenamientoFlow(FlowSpec):
 
-X_train = train_df[['team', 'opponent']]
-y_train = train_df['Resultado']
+    @step
+    def start(self):
+        print("📥 Cargando datasets preprocesados...")
+        self.train = pd.read_csv('data/train_preprocessed.csv')
+        self.test = pd.read_csv('data/test_preprocessed.csv')
+        self.next(self.entrenar)
 
-X_test = test_df[['team', 'opponent']]
-y_test = test_df['Resultado']
+    @step
+    def entrenar(self):
+        print("🧠 Entrenando modelo...")
 
-# 2. Entrenar el modelo
-print("🚀 Entrenando modelo RandomForestClassifier...")
-clf = RandomForestClassifier(n_estimators=100, random_state=42)
-clf.fit(X_train, y_train)
+        X_train = self.train[['team', 'opponent']]
+        y_train = self.train['Resultado']
+        X_test = self.test[['team', 'opponent']]
+        y_test = self.test['Resultado']
 
-# 3. Evaluación
-y_pred = clf.predict(X_test)
-print("📊 Reporte de evaluación del modelo:")
-print(classification_report(y_test, y_pred, target_names=["Win", "Draw", "Loss"]))
+        modelo = RandomForestClassifier(random_state=42)
+        modelo.fit(X_train, y_train)
 
-# 4. Matriz de confusión
-cm = confusion_matrix(y_test, y_pred)
-disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=["Win", "Draw", "Loss"])
-disp.plot(cmap='Blues')
-plt.title("🔍 Matriz de Confusión")
-plt.savefig("data/matriz_confusion.png")
-plt.close()
+        self.predicciones = modelo.predict(X_test)
+        self.y_test = y_test
+        self.modelo = modelo
 
-# 5. Importancia de características
-importancia = clf.feature_importances_
-print("📌 Importancia de características:")
-print(f"Team: {importancia[0]:.4f}")
-print(f"Opponent: {importancia[1]:.4f}")
+        self.next(self.evaluar)
 
-# 6. Guardar el modelo entrenado
-joblib.dump(clf, 'data/modelo_entrenado.pkl')
-print("✅ Modelo guardado en 'data/modelo_entrenado.pkl'")
+    @step
+    def evaluar(self):
+        print("📊 Evaluando precisión del modelo...")
+
+        from sklearn.metrics import accuracy_score
+        precision = accuracy_score(self.y_test, self.predicciones)
+
+        print(f"✅ Precisión del modelo: {precision:.2f}")
+        self.next(self.end)
+
+    @step
+    def end(self):
+        print("🏁 ¡Entrenamiento completado!")
+
+if __name__ == '__main__':
+    EntrenamientoFlow()
