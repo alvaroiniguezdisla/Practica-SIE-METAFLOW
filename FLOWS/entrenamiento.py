@@ -2,6 +2,7 @@ from metaflow import FlowSpec, step
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
+import joblib  # 👉 para guardar el modelo
 
 class EntrenamientoFlow(FlowSpec):
 
@@ -24,19 +25,19 @@ class EntrenamientoFlow(FlowSpec):
         modelo = RandomForestClassifier(random_state=42)
         modelo.fit(X_train, y_train)
 
+        # ✅ Guardar el modelo entrenado
+        joblib.dump(modelo, 'data/modelo_entrenado.pkl')
+        print("✅ Modelo guardado en 'data/modelo_entrenado.pkl'")
+
         self.predicciones = modelo.predict(X_test)
         self.y_test = y_test
-        self.modelo = modelo
 
         self.next(self.evaluar)
 
     @step
     def evaluar(self):
         print("📊 Evaluando precisión del modelo...")
-
-        from sklearn.metrics import accuracy_score
         precision = accuracy_score(self.y_test, self.predicciones)
-
         print(f"✅ Precisión del modelo: {precision:.2f}")
         self.next(self.end)
 
