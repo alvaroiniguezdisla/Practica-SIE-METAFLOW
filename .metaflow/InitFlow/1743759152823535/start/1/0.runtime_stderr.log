@@ -1,0 +1,53 @@
+[MFLOG|0|2025-04-04T09:32:33.939003Z|runtime|dd1d4e06-120f-4a4f-b985-4da8eda91cf6]<flow InitFlow step start> failed:
+[MFLOG|0|2025-04-04T09:32:33.944803Z|runtime|b93b9538-695d-43cd-8839-ba98b2730cad]    Internal error
+[MFLOG|0|2025-04-04T09:32:33.947576Z|runtime|7629b33e-cdc6-4fa8-abb0-f092a9cc84cc]Traceback (most recent call last):
+[MFLOG|0|2025-04-04T09:32:33.947969Z|runtime|a72db839-58ab-4531-9025-68f0a2a858bb]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/cli.py", line 611, in main
+[MFLOG|0|2025-04-04T09:32:33.948291Z|runtime|ecdc07fa-b03a-473c-bdc8-10c7f51cb2c8]    start(auto_envvar_prefix="METAFLOW", obj=state)
+[MFLOG|0|2025-04-04T09:32:33.948547Z|runtime|e3ca5409-e5b6-46ab-bb8f-85735419fab4]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 829, in __call__
+[MFLOG|0|2025-04-04T09:32:33.948756Z|runtime|fef0a560-1f22-4499-82c7-b479ce38bd27]    return self.main(args, kwargs)
+[MFLOG|0|2025-04-04T09:32:33.949017Z|runtime|adf35f57-18f0-408d-8595-f51a1bd2b80a]           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-04T09:32:33.949270Z|runtime|ae74b8b0-aa7f-466b-ae78-0c31f86859a1]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 782, in main
+[MFLOG|0|2025-04-04T09:32:33.949462Z|runtime|e527862a-9812-4a18-801a-5241599aa041]    rv = self.invoke(ctx)
+[MFLOG|0|2025-04-04T09:32:33.949677Z|runtime|3bba18d9-e2f3-4e88-a766-c0a1cf5858c5]         ^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-04T09:32:33.949879Z|runtime|2e62e22e-5795-466b-8427-32211079e413]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/cli_components/utils.py", line 69, in invoke
+[MFLOG|0|2025-04-04T09:32:33.950097Z|runtime|4c7716ac-0547-46f5-bac1-6b0da643561e]    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[MFLOG|0|2025-04-04T09:32:33.950296Z|runtime|1e97601d-98d4-46dc-8d1c-7959e301193f]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-04T09:32:33.950484Z|runtime|819cff0d-97c2-4d29-baa3-7e6e504c8c74]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 1066, in invoke
+[MFLOG|0|2025-04-04T09:32:33.950646Z|runtime|0446e8e3-f3e5-485f-9665-0776c433d1b0]    return ctx.invoke(self.callback, ctx.params)
+[MFLOG|0|2025-04-04T09:32:33.950839Z|runtime|dbad3475-5769-45cd-8418-5f632f05ea4e]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-04T09:32:33.951081Z|runtime|dfe7c2b7-a9d2-49d9-90f5-d3bd4dd623d7]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 610, in invoke
+[MFLOG|0|2025-04-04T09:32:33.951286Z|runtime|ea683e03-2f87-48e1-8d1a-2513310fef15]    return callback(args, kwargs)
+[MFLOG|0|2025-04-04T09:32:34.149171Z|runtime|28321d7d-7024-44e6-8105-c17b6efab9ea]           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-04T09:32:34.149336Z|runtime|0932cc5c-b5be-44fd-a450-e4e597c7fbe0]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/tracing/__init__.py", line 27, in wrapper_func
+[MFLOG|0|2025-04-04T09:32:34.149468Z|runtime|0fb49753-c3da-43f9-837b-4b9b9dc97665]    return func(args, kwargs)
+[MFLOG|0|2025-04-04T09:32:34.149581Z|runtime|8b4e7f0d-cedf-46a9-a7f1-23dab124ce65]           ^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-04T09:32:34.149753Z|runtime|05497465-f59c-4e53-a750-4ed14ee416eb]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/_vendor/click/decorators.py", line 21, in new_func
+[MFLOG|0|2025-04-04T09:32:34.149956Z|runtime|9b630f2c-ea5c-4daa-9cea-6b3fcd137d00]    return f(get_current_context(), args, kwargs)
+[MFLOG|0|2025-04-04T09:32:34.150176Z|runtime|beefb467-5279-432b-b1fd-837ca918966a]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-04T09:32:34.150441Z|runtime|6c74840c-c621-4b9a-a139-03292a4dee2d]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/cli_components/step_cmd.py", line 167, in step
+[MFLOG|0|2025-04-04T09:32:34.150634Z|runtime|67849c63-0714-47f1-b562-a88e6c6e7f62]    task.run_step(
+[MFLOG|0|2025-04-04T09:32:34.150813Z|runtime|afa5c3e9-d2cc-4c89-9afa-8b6272658e34]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/task.py", line 672, in run_step
+[MFLOG|0|2025-04-04T09:32:34.151066Z|runtime|d9b8b56d-08bc-4b4f-8ff3-0ed72aa03a68]    self._exec_step_function(step_func)
+[MFLOG|0|2025-04-04T09:32:34.151251Z|runtime|cfe812fc-398f-4cb8-92d7-ddde86e6f69d]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/task.py", line 62, in _exec_step_function
+[MFLOG|0|2025-04-04T09:32:34.151432Z|runtime|01d4572b-062d-461e-a634-5ab74f0ab8ad]    step_function()
+[MFLOG|0|2025-04-04T09:32:34.151641Z|runtime|1e63d349-56df-47ac-9ad2-205508ade90b]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/FLOWS/preprocesamiento.py", line 9, in start
+[MFLOG|0|2025-04-04T09:32:34.151903Z|runtime|1796b759-dd0c-405b-8dd4-534321b079b8]    self.data = pd.read_csv('data/premier_league.csv')
+[MFLOG|0|2025-04-04T09:32:34.152120Z|runtime|8b5b5a14-154d-490f-9efe-4e7cfc03dfbd]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-04T09:32:34.152342Z|runtime|64c7e0d3-c3d1-4b81-a80c-7bb0a5878f4b]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+[MFLOG|0|2025-04-04T09:32:34.152543Z|runtime|3cf5b72f-fc75-44ae-8902-dc2049b0993e]    return _read(filepath_or_buffer, kwds)
+[MFLOG|0|2025-04-04T09:32:34.152802Z|runtime|e4c10383-8650-436f-b3a4-60c222f656e1]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-04T09:32:34.153033Z|runtime|83898112-abbd-4cab-b503-3f76378a2b76]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+[MFLOG|0|2025-04-04T09:32:34.153247Z|runtime|a989caaf-383e-448b-996e-c16e909cf5d5]    parser = TextFileReader(filepath_or_buffer, kwds)
+[MFLOG|0|2025-04-04T09:32:34.153536Z|runtime|39ac47d1-0b01-4d06-a213-03e2ca4ec3b7]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-04T09:32:34.153767Z|runtime|3f1056d4-fa6a-4bfb-ae8c-8d4f5c801f94]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+[MFLOG|0|2025-04-04T09:32:34.153992Z|runtime|be274ac0-ca4a-4dee-9e5f-3f9e88dccf5b]    self._engine = self._make_engine(f, self.engine)
+[MFLOG|0|2025-04-04T09:32:34.154191Z|runtime|fdf91a2b-2928-4123-b5a7-9ea03803dab9]                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-04T09:32:34.154371Z|runtime|371535a8-6c19-4774-b57c-7a907446beda]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+[MFLOG|0|2025-04-04T09:32:34.154629Z|runtime|ca6691f8-e73a-43e6-b617-6257a82dbc10]    self.handles = get_handle(
+[MFLOG|0|2025-04-04T09:32:34.154874Z|runtime|0c3d1e01-d36c-41c7-b0d0-48ca9b7278da]                   ^^^^^^^^^^^
+[MFLOG|0|2025-04-04T09:32:34.155141Z|runtime|5d765902-8865-4caf-9a2e-f829193b1fdd]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/pandas/io/common.py", line 873, in get_handle
+[MFLOG|0|2025-04-04T09:32:34.155385Z|runtime|7297f840-a494-4e78-849b-3201afbf469d]    handle = open(
+[MFLOG|0|2025-04-04T09:32:34.155650Z|runtime|c669abd9-cfa8-47f1-adfe-8144a7c69300]             ^^^^^
+[MFLOG|0|2025-04-04T09:32:34.155947Z|runtime|6b2eedfa-7c7f-45bc-90b9-8bd5633998dc]FileNotFoundError: [Errno 2] No such file or directory: 'data/premier_league.csv'
+[MFLOG|0|2025-04-04T09:32:34.156281Z|runtime|6a347135-9d45-45da-a931-e771d52537ae]
+[MFLOG|0|2025-04-04T09:32:34.156936Z|runtime|f82ca277-8d8a-4e46-a344-4478d1a939ac]Task failed.

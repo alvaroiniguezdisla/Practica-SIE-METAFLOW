@@ -1,0 +1,8 @@
+[MFLOG|0|2025-03-26T10:36:02.968464Z|runtime|4bbdf569-a544-4687-b44e-0dd3067cf490]🧹 Limpiando y codificando datos...
+[MFLOG|0|2025-03-26T10:36:03.050789Z|runtime|dc69c4a6-c731-4a1f-935f-7b91741871c0]✅ Datos preprocesados:
+[MFLOG|0|2025-03-26T10:36:03.061233Z|runtime|5ef0cb6c-80ee-4d87-9120-4bb44ccd2d63]   team  opponent  Resultado
+[MFLOG|0|2025-03-26T10:36:03.332732Z|runtime|4fd7956b-3743-4493-9e27-e9d938cfdca2]0    15        34          0
+[MFLOG|0|2025-03-26T10:36:03.333290Z|runtime|9fa012a5-3a96-446b-b1cf-b561774e67a7]1    15        12          2
+[MFLOG|0|2025-03-26T10:36:03.333883Z|runtime|b0235559-3a5a-4ea3-8de9-04e0afb3ce1a]2    15        11          1
+[MFLOG|0|2025-03-26T10:36:03.334218Z|runtime|b1227cf7-e2b9-4fbf-b0d9-be5c4fd5a053]3    15         0          0
+[MFLOG|0|2025-03-26T10:36:03.334712Z|runtime|0fee4946-6be4-42af-935f-fc7886570fbb]4    15        31          1

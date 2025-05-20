@@ -1,0 +1,14 @@
+[MFLOG|0|2025-05-20T16:55:06.446150Z|runtime|ddae214c-7def-4e89-9f87-a750964a392d]🔨 Ingeniería de datos...
+[MFLOG|0|2025-05-20T16:55:06.478415Z|runtime|c4e77c2a-83e2-4111-9f4f-4bb6b18b8563]✅ Datos preprocesados:
+[MFLOG|0|2025-05-20T16:55:06.482292Z|runtime|62f60e0d-3131-4681-9ebe-81eaa28334a0]      team  opponent  Resultado
+[MFLOG|0|2025-05-20T16:55:06.485035Z|runtime|8af51ff0-2020-4c1b-bfb6-4b3be219c6b9]708     30         6          1
+[MFLOG|0|2025-05-20T16:55:06.485200Z|runtime|11cb7de7-f85d-41cc-a220-080a806d89d1]2649    27         4          0
+[MFLOG|0|2025-05-20T16:55:06.485346Z|runtime|601fd8da-3b46-4f1b-a54d-433adbaf51df]1451    10        24          0
+[MFLOG|0|2025-05-20T16:55:06.485503Z|runtime|76b73864-8c1d-42fa-9506-5b40f6bc054e]4511    18         6          1
+[MFLOG|0|2025-05-20T16:55:06.485698Z|runtime|617e54cc-b987-4529-a654-cfb1920317d0]1691     6         1          2
+[MFLOG|0|2025-05-20T16:55:06.485989Z|runtime|1e570176-65e9-46c5-bd2f-e9e83e2edb00]      team  opponent  Resultado
+[MFLOG|0|2025-05-20T16:55:06.691848Z|runtime|082a1ea2-0736-4af5-b57b-6d6dfa4b74fd]561     25         6          0
+[MFLOG|0|2025-05-20T16:55:06.692017Z|runtime|f8828e64-7077-47aa-9962-621f48e9fd11]893      7         0          0
+[MFLOG|0|2025-05-20T16:55:06.692260Z|runtime|2ad41955-deef-4310-ad0a-04fcb1b57f02]1684     6        31          2
+[MFLOG|0|2025-05-20T16:55:06.692490Z|runtime|c2847944-4861-4c53-b000-4717fed17589]705     30        24          2
+[MFLOG|0|2025-05-20T16:55:06.692658Z|runtime|93149f55-9da1-48d1-a909-fb27906a155d]1873    18        26          0

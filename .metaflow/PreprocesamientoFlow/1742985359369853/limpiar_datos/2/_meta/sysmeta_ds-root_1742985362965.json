@@ -1,0 +1,1 @@
+{"flow_id": "PreprocesamientoFlow", "run_number": "1742985359369853", "step_name": "limpiar_datos", "task_id": "2", "field_name": "ds-root", "type": "ds-root", "value": "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/.metaflow", "tags": ["attempt_id:0"], "user_name": "clau", "ts_epoch": 1742985362965}

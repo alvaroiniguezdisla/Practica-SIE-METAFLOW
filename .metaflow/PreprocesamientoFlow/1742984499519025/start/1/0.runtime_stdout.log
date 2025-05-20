@@ -1,0 +1,7 @@
+[MFLOG|0|2025-03-26T10:21:41.387253Z|runtime|12951eed-0ce8-49b7-8c1f-89b873e4ccfa]🔄 Leyendo los datos...
+[MFLOG|0|2025-03-26T10:21:41.423732Z|runtime|a879d8cb-d9c0-4b9c-acd2-c94e6e5efd11]📋 Columnas originales:
+[MFLOG|0|2025-03-26T10:21:41.424145Z|runtime|afe5769c-a70a-481e-a303-d1a0ac3c45ff]Index(['Unnamed: 0', 'date', 'time', 'comp', 'round', 'day', 'venue', 'result',
+[MFLOG|0|2025-03-26T10:21:41.702953Z|runtime|d1481e46-7c4c-4da5-8e97-b842397cea02]       'gf', 'ga', 'opponent', 'xg', 'xga', 'poss', 'attendance', 'captain',
+[MFLOG|0|2025-03-26T10:21:41.703341Z|runtime|942e372b-3d5d-4a06-9d6c-4c8b8b805b88]       'formation', 'referee', 'match report', 'notes', 'sh', 'sot', 'dist',
+[MFLOG|0|2025-03-26T10:21:41.703610Z|runtime|2395693f-0e1a-43df-9855-ba1a99960ede]       'fk', 'pk', 'pkatt', 'season', 'team'],
+[MFLOG|0|2025-03-26T10:21:41.704053Z|runtime|17a9e17a-4157-4554-8bd0-4887404bb511]      dtype='object')

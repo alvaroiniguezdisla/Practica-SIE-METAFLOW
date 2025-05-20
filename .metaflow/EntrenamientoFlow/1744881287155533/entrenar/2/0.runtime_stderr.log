@@ -1,0 +1,45 @@
+[MFLOG|0|2025-04-17T09:14:49.550815Z|runtime|2bc0b5f7-2eb4-4028-9e01-d6ba7fae1d35]<flow EntrenamientoFlow step entrenar> failed:
+[MFLOG|0|2025-04-17T09:14:49.556484Z|runtime|b859731c-1326-419f-9ca1-49f495952a7f]    Internal error
+[MFLOG|0|2025-04-17T09:14:49.558695Z|runtime|847f0730-efc4-41d0-8fac-1f72b1349a46]Traceback (most recent call last):
+[MFLOG|0|2025-04-17T09:14:49.558940Z|runtime|a7909a12-a075-47e9-8228-956745ed1618]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/cli.py", line 611, in main
+[MFLOG|0|2025-04-17T09:14:49.559178Z|runtime|71de512a-74df-4b15-b097-40e09349ed06]    start(auto_envvar_prefix="METAFLOW", obj=state)
+[MFLOG|0|2025-04-17T09:14:49.559395Z|runtime|bda43b82-2917-4928-8775-d35ad2642bf2]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 829, in __call__
+[MFLOG|0|2025-04-17T09:14:49.559623Z|runtime|1c5abd7c-7d9e-4408-86ab-11f262cf4aa1]    return self.main(args, kwargs)
+[MFLOG|0|2025-04-17T09:14:49.559832Z|runtime|c6232d28-3a78-4865-8a8d-75040db20c4b]           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T09:14:49.560016Z|runtime|e9780c35-c0e5-4815-9da3-b66770eb2f59]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 782, in main
+[MFLOG|0|2025-04-17T09:14:49.560233Z|runtime|996c23c7-8ebb-48b8-b3a3-d065fa547480]    rv = self.invoke(ctx)
+[MFLOG|0|2025-04-17T09:14:49.560433Z|runtime|f0204d76-baad-45cd-8f06-6e52f35076df]         ^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T09:14:49.560710Z|runtime|2841eed4-4616-4954-8d70-f810a13781d6]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/cli_components/utils.py", line 69, in invoke
+[MFLOG|0|2025-04-17T09:14:49.560933Z|runtime|c8607999-ecff-43a8-bfbf-23b877c6fa27]    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[MFLOG|0|2025-04-17T09:14:49.561149Z|runtime|31183996-eb10-4c76-b0cd-e1be37a1f143]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T09:14:49.561371Z|runtime|c660e080-856f-4656-9836-42b454525515]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 1066, in invoke
+[MFLOG|0|2025-04-17T09:14:49.561617Z|runtime|072f4673-26fd-48e0-80f1-ab8ffccd5e60]    return ctx.invoke(self.callback, ctx.params)
+[MFLOG|0|2025-04-17T09:14:49.561855Z|runtime|4cdce2be-f442-485b-b1dc-e50853e8d9cb]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T09:14:49.562091Z|runtime|e9e8110b-5040-48a1-a5bc-7662b90575f9]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 610, in invoke
+[MFLOG|0|2025-04-17T09:14:49.562322Z|runtime|898feb11-b288-4852-8fae-f51097298c91]    return callback(args, kwargs)
+[MFLOG|0|2025-04-17T09:14:49.562553Z|runtime|9f9fd4ad-8f37-411e-a9b1-9f9d2e7215eb]           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T09:14:49.562758Z|runtime|54d26582-cd26-40df-a327-975db4ecdabb]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/tracing/__init__.py", line 27, in wrapper_func
+[MFLOG|0|2025-04-17T09:14:49.562981Z|runtime|c69be601-0b6a-4485-a2b3-ef87fd71b659]    return func(args, kwargs)
+[MFLOG|0|2025-04-17T09:14:49.764126Z|runtime|0cc52210-82c2-438b-8195-eedf241ec09a]           ^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T09:14:49.764543Z|runtime|0d18895a-8b0d-4fb6-a183-817b79f8465e]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/_vendor/click/decorators.py", line 21, in new_func
+[MFLOG|0|2025-04-17T09:14:49.764656Z|runtime|3f693a07-0aed-498e-bb01-3f29455059dd]    return f(get_current_context(), args, kwargs)
+[MFLOG|0|2025-04-17T09:14:49.764937Z|runtime|afd9921a-1568-468e-8858-dd316e7ceb28]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T09:14:49.765074Z|runtime|6da03b91-54c5-41e3-bb69-b4b21663aa83]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/cli_components/step_cmd.py", line 167, in step
+[MFLOG|0|2025-04-17T09:14:49.765226Z|runtime|e8114782-14e1-423b-b409-19c525a04433]    task.run_step(
+[MFLOG|0|2025-04-17T09:14:49.765335Z|runtime|af1b7185-bf67-4af3-bc39-4ac9d93d756e]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/task.py", line 672, in run_step
+[MFLOG|0|2025-04-17T09:14:49.765433Z|runtime|20b0a91b-c4b8-4f2b-b6de-16b2f0703d28]    self._exec_step_function(step_func)
+[MFLOG|0|2025-04-17T09:14:49.765610Z|runtime|0bb9fd8e-be15-4001-a5c3-2765678010a5]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/task.py", line 62, in _exec_step_function
+[MFLOG|0|2025-04-17T09:14:49.765804Z|runtime|970c3540-05ae-4b24-994a-d167835ded44]    step_function()
+[MFLOG|0|2025-04-17T09:14:49.765993Z|runtime|ee0185d4-5763-4076-85f6-17eba48bb4ca]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/FLOWS/entrenamiento.py", line 22, in entrenar
+[MFLOG|0|2025-04-17T09:14:49.766186Z|runtime|fa97b2b7-b6af-4b09-8601-fce2e5ad9cd9]    X_train = self.train[features]
+[MFLOG|0|2025-04-17T09:14:49.766392Z|runtime|ea9d7e5f-cc32-4f47-a6e6-564d9fe2e285]              ~~~~~~~~~~^^^^^^^^^^
+[MFLOG|0|2025-04-17T09:14:49.766582Z|runtime|96f20da7-9591-4157-a62c-31f2ab0f8d3d]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 4108, in __getitem__
+[MFLOG|0|2025-04-17T09:14:49.766776Z|runtime|4fa3ece5-ae00-4b71-bbbb-69a041fe3d7c]    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+[MFLOG|0|2025-04-17T09:14:49.766974Z|runtime|c84091d9-3e91-458c-abdc-1981cfc7f95d]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-04-17T09:14:49.767163Z|runtime|a2c76ebf-7ace-4aaa-8537-99e020d6e8c0]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 6200, in _get_indexer_strict
+[MFLOG|0|2025-04-17T09:14:49.767336Z|runtime|ff1d9a20-c658-4986-9028-d0f7fdd227e8]    self._raise_if_missing(keyarr, indexer, axis_name)
+[MFLOG|0|2025-04-17T09:14:49.767515Z|runtime|ad128eaa-9a32-4217-ad49-05a9bd0a6494]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 6252, in _raise_if_missing
+[MFLOG|0|2025-04-17T09:14:49.767692Z|runtime|0c8db8c8-0b1b-4bc0-853b-ff9fe789ec30]    raise KeyError(f"{not_found} not in index")
+[MFLOG|0|2025-04-17T09:14:49.767875Z|runtime|740b8118-042d-47ff-9d68-4e3632a6a3d8]KeyError: "['gf_ult5', 'ga_ult5'] not in index"
+[MFLOG|0|2025-04-17T09:14:49.768053Z|runtime|6481c2bb-e304-41d3-a7ae-0b80faa0fa5b]
+[MFLOG|0|2025-04-17T09:14:49.779306Z|runtime|079f5fe6-cc58-4fd4-8cb4-f8427b6916c1]Task failed.

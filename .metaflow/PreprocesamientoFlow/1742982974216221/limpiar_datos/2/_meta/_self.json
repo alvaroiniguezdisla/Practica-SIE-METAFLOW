@@ -1,0 +1,1 @@
+{"run_number": "1742982974216221", "step_name": "limpiar_datos", "task_id": "2", "flow_id": "PreprocesamientoFlow", "user_name": "clau", "tags": [], "system_tags": ["runtime:dev", "python_version:3.12.3", "metaflow_version:2.15.6", "user:clau"], "ts_epoch": 1742982976079}

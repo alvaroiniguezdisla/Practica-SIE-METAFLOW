@@ -1,0 +1,8 @@
+[MFLOG|0|2025-03-26T10:43:25.740918Z|runtime|159ffd6c-3cc9-4edb-bf51-b932626f4bca]🧹 Limpiando y codificando datos...
+[MFLOG|0|2025-03-26T10:43:25.783510Z|runtime|298d8ad1-ce9e-4fef-9332-1ea1ea643029]✅ Datos preprocesados:
+[MFLOG|0|2025-03-26T10:43:25.797662Z|runtime|37a7b0de-6e95-466b-a4fa-4302365825cb]       team_nombre  team_num opponent_nombre  opponent_num  Resultado
+[MFLOG|0|2025-03-26T10:43:26.131523Z|runtime|a721ac7f-c876-4a97-84da-f8dc8522de00]0  Manchester City        15          Wolves            34          0
+[MFLOG|0|2025-03-26T10:43:26.132247Z|runtime|1761b62d-4143-43c3-bd7e-f88340b62c44]1  Manchester City        15  Leicester City            12          2
+[MFLOG|0|2025-03-26T10:43:26.132831Z|runtime|e71c1e42-4998-48e1-aa9d-fb49fe5b875b]2  Manchester City        15    Leeds United            11          1
+[MFLOG|0|2025-03-26T10:43:26.133268Z|runtime|62186fbf-c2e3-4729-99e4-65fb17a97287]3  Manchester City        15         Arsenal             0          0
+[MFLOG|0|2025-03-26T10:43:26.133895Z|runtime|ee82e3ef-9610-4f2b-bcce-30edf7f4d44e]4  Manchester City        15        West Ham            31          1

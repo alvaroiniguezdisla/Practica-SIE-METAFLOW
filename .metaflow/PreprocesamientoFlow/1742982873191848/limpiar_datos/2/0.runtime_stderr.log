@@ -1,0 +1,56 @@
+[MFLOG|0|2025-03-26T09:54:36.515783Z|runtime|249fc1bb-cf71-42bc-a8af-5405d84aead9]<flow PreprocesamientoFlow step limpiar_datos> failed:
+[MFLOG|0|2025-03-26T09:54:36.522255Z|runtime|d12c9b33-326c-4541-905f-b50ff96dbef8]    Internal error
+[MFLOG|0|2025-03-26T09:54:36.523789Z|runtime|5b980d50-aaba-46d2-8ee4-17b0fa838129]Traceback (most recent call last):
+[MFLOG|0|2025-03-26T09:54:36.524052Z|runtime|d1efc90f-7574-47da-be57-dea54e764080]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/sklearn/utils/_encode.py", line 235, in _encode
+[MFLOG|0|2025-03-26T09:54:36.524248Z|runtime|08ed811d-256b-41be-b725-747306c6e634]    return _map_to_integer(values, uniques)
+[MFLOG|0|2025-03-26T09:54:36.524355Z|runtime|15020fc7-f641-40e1-826e-47a529f7805a]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-03-26T09:54:36.524445Z|runtime|8d4887d8-fa1f-4e2f-9f11-6808e62ecffc]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/sklearn/utils/_encode.py", line 174, in _map_to_integer
+[MFLOG|0|2025-03-26T09:54:36.524545Z|runtime|8ed4e448-5fa6-433a-924b-7e564d1a48aa]    return xp.asarray([table[v] for v in values], device=device(values))
+[MFLOG|0|2025-03-26T09:54:36.524656Z|runtime|b7f21b85-4ad7-4324-9ae9-273fcf4ed670]                       ~~~~~^^^
+[MFLOG|0|2025-03-26T09:54:36.524755Z|runtime|436bcb57-125b-48e0-b2d9-5cbe3589b7ba]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/sklearn/utils/_encode.py", line 167, in __missing__
+[MFLOG|0|2025-03-26T09:54:36.524844Z|runtime|a60b1a78-4a01-49b5-916e-3e02518d6ecf]    raise KeyError(key)
+[MFLOG|0|2025-03-26T09:54:36.524931Z|runtime|f569ae00-2b48-4f98-9a54-cd3fdc7da6d7]KeyError: 'Wolves'
+[MFLOG|0|2025-03-26T09:54:36.525017Z|runtime|d76a99eb-9ccf-4d52-bb10-40f002d07059]
+[MFLOG|0|2025-03-26T09:54:36.525132Z|runtime|156c53cd-148e-4ffe-857f-682db313695e]During handling of the above exception, another exception occurred:
+[MFLOG|0|2025-03-26T09:54:36.525219Z|runtime|928f9c47-1a32-4f15-af43-b0c516849232]
+[MFLOG|0|2025-03-26T09:54:36.525333Z|runtime|b97c6375-be38-4434-9700-f0ad83425970]Traceback (most recent call last):
+[MFLOG|0|2025-03-26T09:54:36.525478Z|runtime|7f4bbf40-6112-4838-8cb7-3bb767aa5e05]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/cli.py", line 611, in main
+[MFLOG|0|2025-03-26T09:54:36.525567Z|runtime|c791e1b9-1bc5-44c9-9358-30be630eee18]    start(auto_envvar_prefix="METAFLOW", obj=state)
+[MFLOG|0|2025-03-26T09:54:36.525656Z|runtime|21a24661-96ac-47de-acf5-f112e4703652]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 829, in __call__
+[MFLOG|0|2025-03-26T09:54:36.525743Z|runtime|5982a145-60d7-4ef5-b6fb-badcca03b6c4]    return self.main(args, kwargs)
+[MFLOG|0|2025-03-26T09:54:36.525854Z|runtime|e1df0f70-38a6-488c-81b3-fa0893bfd225]           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-03-26T09:54:36.525942Z|runtime|7c8e61c7-1966-4148-b005-7cce48e9fa45]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 782, in main
+[MFLOG|0|2025-03-26T09:54:36.526069Z|runtime|38765821-a8f9-4ce7-8c19-9c85b8dae6e4]    rv = self.invoke(ctx)
+[MFLOG|0|2025-03-26T09:54:36.526177Z|runtime|bdd4a4d7-3ece-4a22-bb17-396f47cc77a6]         ^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-03-26T09:54:36.526290Z|runtime|b3964d5c-f704-445f-b272-150a92270724]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/cli_components/utils.py", line 69, in invoke
+[MFLOG|0|2025-03-26T09:54:36.526490Z|runtime|f62eebcb-8601-4891-968b-7bc40a520ce9]    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[MFLOG|0|2025-03-26T09:54:36.526607Z|runtime|d106a95e-bc98-486f-9ef4-d49108d1585d]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-03-26T09:54:36.526744Z|runtime|01c25d48-5164-4129-a832-26a04f2251bd]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 1066, in invoke
+[MFLOG|0|2025-03-26T09:54:36.526858Z|runtime|bb5a5d57-b182-47b1-82df-e58265e97a97]    return ctx.invoke(self.callback, ctx.params)
+[MFLOG|0|2025-03-26T09:54:36.526945Z|runtime|dbb65007-8639-4553-8e99-8084499312df]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-03-26T09:54:36.527060Z|runtime|e6c93a3e-0531-45eb-82c3-8be517d02de3]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 610, in invoke
+[MFLOG|0|2025-03-26T09:54:36.527176Z|runtime|cd068236-26fc-41c0-9eb9-99842533a599]    return callback(args, kwargs)
+[MFLOG|0|2025-03-26T09:54:36.527313Z|runtime|451fafbb-5fb9-4822-8f10-b87e21346056]           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-03-26T09:54:36.527466Z|runtime|d3f9f9d4-c89b-4db9-a9bc-c4275f5fed80]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/tracing/__init__.py", line 27, in wrapper_func
+[MFLOG|0|2025-03-26T09:54:36.527588Z|runtime|4c924c11-dd17-4948-979d-9016fbb490fc]    return func(args, kwargs)
+[MFLOG|0|2025-03-26T09:54:36.527698Z|runtime|0da2b1c3-0592-46c0-8fe3-15b1ac33b834]           ^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-03-26T09:54:36.527835Z|runtime|f77b171f-4734-4f22-9bc5-be3b407f9e47]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/_vendor/click/decorators.py", line 21, in new_func
+[MFLOG|0|2025-03-26T09:54:36.527974Z|runtime|84b0dda4-252d-4dac-88c1-163915843ef6]    return f(get_current_context(), args, kwargs)
+[MFLOG|0|2025-03-26T09:54:36.528087Z|runtime|69f234aa-cc4b-4dc5-8dbc-8250f6c5d05a]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-03-26T09:54:36.528225Z|runtime|a89afe7e-7b60-42b7-ad16-e01ba1735b81]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/cli_components/step_cmd.py", line 167, in step
+[MFLOG|0|2025-03-26T09:54:36.528348Z|runtime|b82d896a-2a9d-48bd-91e8-424a0055e395]    task.run_step(
+[MFLOG|0|2025-03-26T09:54:36.528457Z|runtime|b3a05add-796c-4450-b18d-d7663619efb9]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/task.py", line 672, in run_step
+[MFLOG|0|2025-03-26T09:54:36.528570Z|runtime|f40157f3-c582-4bda-855f-3fc1c73682a7]    self._exec_step_function(step_func)
+[MFLOG|0|2025-03-26T09:54:36.528687Z|runtime|43e8c1d7-6fbc-4608-9a67-083608ca18a7]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/metaflow/task.py", line 62, in _exec_step_function
+[MFLOG|0|2025-03-26T09:54:36.528798Z|runtime|3580626d-c507-4f69-9d55-4bea67c5d7f4]    step_function()
+[MFLOG|0|2025-03-26T09:54:36.528937Z|runtime|db5fda78-fd58-426b-8aee-d1bbe43920e6]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/FLOWS/preprocesamiento.py", line 28, in limpiar_datos
+[MFLOG|0|2025-03-26T09:54:36.529126Z|runtime|b2e0866f-34b5-4ac5-9cff-5f9524f364bd]    self.df['opponent'] = equipo_encoder.transform(self.df['opponent'])
+[MFLOG|0|2025-03-26T09:54:36.529264Z|runtime|3a7ce538-5d54-43f7-a800-9091303a092e]                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-03-26T09:54:36.529402Z|runtime|8705f2c5-13eb-4276-a1f7-984f17a16ca3]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/sklearn/preprocessing/_label.py", line 134, in transform
+[MFLOG|0|2025-03-26T09:54:36.529560Z|runtime|50853b17-421a-4893-9d1c-d190ea696157]    return _encode(y, uniques=self.classes_)
+[MFLOG|0|2025-03-26T09:54:36.529698Z|runtime|74cf98d0-fb0c-41ac-8ccd-421ecf8faa5c]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2025-03-26T09:54:36.529834Z|runtime|9eccac8d-772b-4011-9047-be2d6b89c693]  File "/home/clau/proyectos/metaflow/Practica-SIE-METAFLOW/venv/lib/python3.12/site-packages/sklearn/utils/_encode.py", line 237, in _encode
+[MFLOG|0|2025-03-26T09:54:36.529974Z|runtime|895ace21-5309-4fb5-93b0-980d10c8e323]    raise ValueError(f"y contains previously unseen labels: {str(e)}")
+[MFLOG|0|2025-03-26T09:54:36.530112Z|runtime|c6438df9-ad63-4a6c-83a3-175317c1dbe1]ValueError: y contains previously unseen labels: 'Wolves'
+[MFLOG|0|2025-03-26T09:54:36.530258Z|runtime|6c3f90fa-71a8-40e8-948f-57245c8b6abb]
+[MFLOG|0|2025-03-26T09:54:36.848508Z|runtime|248fd614-ec18-44a8-92c8-da8794b5fd41]Task failed.
