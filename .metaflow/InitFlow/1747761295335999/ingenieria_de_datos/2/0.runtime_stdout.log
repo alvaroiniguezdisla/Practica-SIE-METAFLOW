@@ -1,0 +1,8 @@
+[MFLOG|0|2025-05-20T17:14:57.535603Z|runtime|ff013bb9-4f73-4ca2-bab8-909c444afe02]🔨 Ingeniería de datos...
+[MFLOG|0|2025-05-20T17:14:57.587975Z|runtime|ca77072a-c6a1-4c78-831b-475aa5d0b620]✅ Ejemplo datos procesados:
+[MFLOG|0|2025-05-20T17:14:57.597091Z|runtime|19f727ec-4c12-4ae3-a368-cf7a0aa1174e]      team  opponent  venue  gf  ga   xg  xga  poss  formation  Resultado
+[MFLOG|0|2025-05-20T17:14:57.845825Z|runtime|5d22c5c2-fdda-44b2-a517-7e1b83706cad]708     30         6      1   0   0  1.6  0.5    38         10          1
+[MFLOG|0|2025-05-20T17:14:57.846017Z|runtime|1aeef71f-7fff-4b94-a775-321bfc68a938]2649    27         4      1   2   0  2.2  0.7    52          4          0
+[MFLOG|0|2025-05-20T17:14:57.846161Z|runtime|c1f8fd8c-1dca-468f-9445-460ab0197b5b]1451    10        24      0   3   1  2.2  0.6    60         16          0
+[MFLOG|0|2025-05-20T17:14:57.846400Z|runtime|06303d0f-6239-4f17-a288-37a8a13c5e40]4511    18         6      0   0   0  1.1  0.7    54         18          1
+[MFLOG|0|2025-05-20T17:14:57.846688Z|runtime|7ffe7398-305d-47ec-a4d3-de38233a1bfa]1691     6         1      1   2   3  1.2  3.2    36         18          2

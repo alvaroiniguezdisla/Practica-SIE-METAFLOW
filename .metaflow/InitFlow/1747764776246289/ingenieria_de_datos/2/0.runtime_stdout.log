@@ -1,0 +1,8 @@
+[MFLOG|0|2025-05-20T18:12:58.560256Z|runtime|e8a8b344-154d-470f-a40b-de2fe1ddefeb]🔨 Ingeniería de datos con win_ratio_last5 incluida...
+[MFLOG|0|2025-05-20T18:13:02.678785Z|runtime|301d2ca0-7777-48a7-a485-9fffe73434ec]✅ Ejemplo datos procesados con win_ratio_last5:
+[MFLOG|0|2025-05-20T18:13:02.684685Z|runtime|c2dedbb2-e9e3-4065-8182-a4653fbe9acb]      team  opponent  venue  win_ratio_last5  Resultado
+[MFLOG|0|2025-05-20T18:13:02.888701Z|runtime|3ddce6be-77ed-484d-b5cd-4f661aedad8d]708     30         6      1              0.0          1
+[MFLOG|0|2025-05-20T18:13:02.889097Z|runtime|b99bde8c-253f-4471-ae43-de3b7693da82]2649    27         4      1              0.6          0
+[MFLOG|0|2025-05-20T18:13:02.889477Z|runtime|0068645e-dcf6-4f5d-bb46-c1f1f5bcaffe]1451    10        24      0              0.2          0
+[MFLOG|0|2025-05-20T18:13:02.889886Z|runtime|4ffe048c-bc46-4629-80e6-81dd23eb551c]4511    18         6      0              0.2          1
+[MFLOG|0|2025-05-20T18:13:02.890322Z|runtime|9c3535b3-9f86-453a-9882-bc2a983e8940]1691     6         1      1              0.2          2

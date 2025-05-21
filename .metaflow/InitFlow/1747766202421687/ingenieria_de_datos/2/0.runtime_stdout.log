@@ -1,0 +1,8 @@
+[MFLOG|0|2025-05-20T18:36:44.591486Z|runtime|888b0b0d-8832-43f3-9a4c-90404b2f00be]🔨 Ingeniería de datos simplificada...
+[MFLOG|0|2025-05-20T18:36:44.633125Z|runtime|8dc15576-391f-45ce-8ba8-5f579b8fdfe1]✅ Ejemplo de datos procesados:
+[MFLOG|0|2025-05-20T18:36:44.636378Z|runtime|5d748744-491b-4584-be83-0e7af9c0e2ac]      team  opponent  venue  Resultado
+[MFLOG|0|2025-05-20T18:36:44.839626Z|runtime|ba121323-fde6-497f-8657-14370d4547f9]708     30         6      1          1
+[MFLOG|0|2025-05-20T18:36:44.839855Z|runtime|b8bff87b-c841-470a-9cb5-340b178dd7b5]2649    27         4      1          0
+[MFLOG|0|2025-05-20T18:36:44.840004Z|runtime|2118b605-fe6f-4f02-9b52-f0ad018b346c]1451    10        24      0          0
+[MFLOG|0|2025-05-20T18:36:44.840151Z|runtime|5813079f-51f4-4eb7-b1c3-5c4723158d9d]4511    18         6      0          1
+[MFLOG|0|2025-05-20T18:36:44.840322Z|runtime|d7d0a164-01ae-4281-8279-1951a14d778e]1691     6         1      1          2

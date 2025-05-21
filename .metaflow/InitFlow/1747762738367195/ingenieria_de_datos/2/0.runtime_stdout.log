@@ -1,0 +1,8 @@
+[MFLOG|0|2025-05-20T17:39:00.571481Z|runtime|cb77c75b-29a1-4287-870a-67cb6fef1e81]🔨 Ingeniería de datos con team, opponent, referee, poss...
+[MFLOG|0|2025-05-20T17:39:00.608156Z|runtime|145546ec-4250-4f04-aac6-65b941d3bf78]✅ Ejemplo datos procesados:
+[MFLOG|0|2025-05-20T17:39:00.615486Z|runtime|0cefd845-1c70-49f7-9788-10d612a1094e]      team  opponent  referee  poss  Resultado
+[MFLOG|0|2025-05-20T17:39:00.818786Z|runtime|fccc04a5-1e7a-41c5-869c-a0335a81ac7a]708     30         6       20    38          1
+[MFLOG|0|2025-05-20T17:39:00.819001Z|runtime|598c81a6-fb19-4c81-8026-a5bcb78ecc58]2649    27         4       25    52          0
+[MFLOG|0|2025-05-20T17:39:00.819116Z|runtime|41d59138-277a-4474-b23a-55acbea64ce3]1451    10        24       28    60          0
+[MFLOG|0|2025-05-20T17:39:00.819284Z|runtime|c3e850c7-32b4-455f-9c93-2481fd1589d9]4511    18         6        1    54          1
+[MFLOG|0|2025-05-20T17:39:00.819429Z|runtime|bb710cc0-e802-4150-988c-bbd0ca8cc1c7]1691     6         1       30    36          2

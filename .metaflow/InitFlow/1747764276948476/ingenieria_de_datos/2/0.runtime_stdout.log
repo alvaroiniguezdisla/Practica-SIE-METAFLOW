@@ -1,0 +1,8 @@
+[MFLOG|0|2025-05-20T18:04:39.278953Z|runtime|20366ec0-c69b-4d95-82e3-79a73a7ca885]🔨 Ingeniería de datos con team, opponent, venue, poss, result...
+[MFLOG|0|2025-05-20T18:04:39.312689Z|runtime|87a05051-9526-4571-9fc8-7f241a3a4288]✅ Ejemplo datos procesados:
+[MFLOG|0|2025-05-20T18:04:39.317382Z|runtime|4bdd7fd7-06ab-46f4-8fec-6ebd4f9fd546]      team  opponent  venue  Resultado
+[MFLOG|0|2025-05-20T18:04:39.520285Z|runtime|6d637ecd-d4e6-45a2-94d4-d07a596fc9f9]708     30         6      1          1
+[MFLOG|0|2025-05-20T18:04:39.520671Z|runtime|ab8d8eb6-0c6f-420e-8500-6838f2b76766]2649    27         4      1          0
+[MFLOG|0|2025-05-20T18:04:39.521071Z|runtime|e2c1f88e-17f8-4b70-a04a-1c9bc0056936]1451    10        24      0          0
+[MFLOG|0|2025-05-20T18:04:39.521497Z|runtime|3cfc9f7b-d05d-46bf-8870-98aa88477a6e]4511    18         6      0          1
+[MFLOG|0|2025-05-20T18:04:39.522134Z|runtime|a8769dff-a7ce-4b7b-b2ad-4488f67ad4b8]1691     6         1      1          2
